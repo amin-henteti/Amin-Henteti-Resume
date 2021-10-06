@@ -1,0 +1,293 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	a4paper,
+	% showframes,
+	% vline=2.2em,
+	% maincolor=cvgreen,
+	% sidecolor=gray!50,
+	% sectioncolor=red,
+	% subsectioncolor=orange,
+	% itemtextcolor=black!80,
+	% sidebarwidth=0.4\paperwidth,
+	% topbottommargin=0.03\paperheight,
+	% leftrightmargin=20pt,
+	% profilepicsize=4.5cm,
+	% profilepicborderwidth=3.5pt,
+	% profilepicstyle=profilecircle,
+	% profilepiczoom=1.0,
+	% profilepicxshift=0mm,
+	% profilepicyshift=0mm,
+	% profilepicrounding=1.0cm,
+]{fortysecondscv}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+% \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+%	\usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information,\\[0.2em] 
+% your name
+\cvname{Amin HENTETI}
+% job title/career
+\cvjobtitle{Ingénieur diplômé\\ de l'ENSTA Paris\\ passionné par l'informatique}
+%if center : \vspace{-0.5cm}Ingénieur diplômé\\ de l'ENSTA Paris\\ \vspace{0.1cm} passionné par l'informatique\vspace{-0.5cm}}
+%% optional information
+% profile picture
+\cvprofilepic{photo.jpg}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+%\cvbirthday{\today}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{2 Rue chataigneraie, Rennes France}
+% phone number
+\cvphone{+33 6 59 94 36 32}
+% personal website
+%\cvsite{https://pandascience.net}
+% email address
+\cvmail{aminhenteti21@gmail.com}
+% pgp key
+%\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% any other custom entry
+%\cvcustomdata{\faFlag}{Chinese}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\graphicspath{[scale=0.5]{pics/flags/}}
+
+	% social network accounts incl. proper hyperlinks
+	\profilesection{Réseaux Sociaux}{}
+		\begin{icontable}{1.5em}{1em}
+			\social{\faLinkedin}
+				{https://www.linkedin.com/in/amin-henteti-632312119/}
+				{/in/amin-henteti-632312119/}
+			\social{\faGithub}
+				{https://github.com/amin-henteti}
+				{/amin-henteti}
+		\end{icontable}
+
+	\profilesection{Langues}{}
+	\pointskill{\flag{FR.png}}{Français}{4}
+	\pointskill{\flag{GB.png}}{Anglais}{4}
+		\pointskill{\flag{tun.png}}{Arabe}{5}
+		%\pointskill{\flag{DE.png}}{Allmend}{2}
+
+	\profilesection{Programmation}{}
+	\barskill{\faPython}{Python}{90}
+	\barskill{\faFileCode}{Matlab}{80}
+	\barskill{\faCuttlefish}{C/C++}{60}
+	\barskill{\faJava}{Java}{40}
+	\barskill{\faHtml5}{HTML}{30}
+	\barskill{\faCss3}{CSS}{30}
+	\barskill{\faEndereco}{Visual Basic}{20}
+	
+	\profilesection{ Outils} { de  programmation}
+	\skill[]{}{\large Git, Visual Studio Code,\\ Spyder (Anaconda), \\
+	Windows et Linux}
+	
+
+%	\cvitemshort{\textbf{Langages programmation}}{\em Python, Matlab, C/C++, Java, Visual Basic, Html, CSS}
+%	\cvitemshort{\textbf{Outils programmation}}{\em Git, Visual Studio Code, Spyder (Anaconda)
+	
+	%\profilesection{Savoir faire}{}
+	%\skill[]{}{Programmation}\skill[]{}{Recherche scientifique}\skill[]{}{Solution innovant}
+
+	%\profilesection{Soft Skills}{}
+	%\pointskill{\faChild}{Chillin' hard}{3}[4]\skill[]{}{Patience}\skill[]{}{Esprit d'initiative}\skill[]{}{Persévérant}
+}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+	\profilesection{About Me}
+	\aboutme{
+		The giant panda is a terrestrial animal and primarily spends its life
+		roaming and feeding in the bamboo forests of the Qinling Mountains and in
+		the hilly province of Sichuan.
+	}
+
+	\profilesection{Diagrams}
+	\begin{sidebarminipage}
+		\chartlabel{Bubble}
+		\chartlabel{Diagrams}
+		\chartlabel{with}
+		\chartlabel{proper}
+		\chartlabel{overflow}
+		\chartlabel{protection}
+		\chartlabel{for}
+		\chartlabel{labels}
+	\end{sidebarminipage}
+
+	\begin{figure}\centering
+		\smartdiagram[bubble diagram]{
+			\textcolor{white}{\textbf{Being a}} \\
+			\textcolor{white}{\textbf{Panda}}, % center bubble
+			\textcolor{black!90}{Eating},
+			\textcolor{black!90}{Sleeping},
+			\textcolor{black!90}{Rolling},
+			\textcolor{black!90}{Playing},
+			\textcolor{black!90}{Chilling}
+		}
+	\end{figure}
+
+	\chartlabel{Wheel Chart}
+
+	\wheelchart{3.7em}{2em}{%
+	20/3em/maincolor!50/Chill,
+	15/3em/maincolor!15/Play,
+	30/4em/maincolor!40/Sleep,
+	20/3em/maincolor!20/Eat
+	}
+
+	\profilesection{Barskills}
+	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
+	\barskill{\faImage}{Playing Chess}{30}
+	\barskill{\faMusic}{Playing the bamboo flute}{50}
+
+	\profilesection{Memberships}
+	\begin{memberships}
+		\membership[4em]{pics/logo.png}{PandaScience.net}
+		\membership[4em]{pics/logo.png}{Some longer text spanning over more than
+			only one line}
+	\end{memberships}
+}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Formation}
+%\cvsubsection{Postgraduate Training}
+\begin{cvtable}[1.5]
+	\cvitem{2017 - 2021}{Diplôme d’ingénieur
+~~-~~ ENSTA Paris} {}
+{
+Formation d'ingénieur \textbf{généraliste} en {mécanique}, {informatique} et mathématique, en {double diplôme} avec l'École nationale d'ingénieurs de Tunis \textbf{ENIT}. 
+}
+\vspace{-0.5cm}
+\\
+	\cvitem{2015 - 2017}{Classes préparatoires ~~-~~ IPEIS}{}
+		{Études post-Bac à l'Institut préparatoire aux études d'ingénieur de Sfax, Tunisie.
+  Filière : Mathématique et Physique\\
+  {Rang : 20/1300} au Concours nationale d’entrée aux formations d’ingénieurs de Tunisie}
+\end{cvtable}
+
+\cvsection{Projets Académiques}
+\begin{cvtable}[1.5]
+\cvitem{07/20 - 12/20}{\textbf{\large Groupe PSA} - Vélizy Paris, \emph{Stage de fin d'études}} {6 mois}{Optimisation et automatisation du processus de calcul de crash automobile par \textbf{\emph{Machine Learning}}. 
+Analyse des résultats en choc latéral des modèles numériques à travers des rapports
+Excel et HTML écrits automatiquement par un code \textbf{Python}\\
+Environnement technique: \emph{Python, Perl, SFE Concept, ANSA, META}}
+\vspace{-0.25cm}
+\\
+\vspace{0.3cm}\cvitem{05/19 - 07/19}{\textbf{\large Mines Paris} ~~-~~ {\normal Centre Automatique et Systèmes},\\ \emph{Stage de recherche}}{3 mois}{Conception d'un capteur à base de la technologie des \textbf{fibres optiques} par laser, dans le but d'estimer par dé-convolution un signal original à partir du signal observé\\
+Environnement technique: \emph{Matlab, Python}}
+\vspace{0.3cm}
+
+\cvitem{11/19~--~12/19}{\textbf{\large Total} ~~-~~ Projet d'entreprise ~~-~~ équipe de 6 personnes}{}{Prédiction des pertes de la performance des panneaux solaires liées au dépôt de poussière sur la face des panneaux avec un algorithme \textbf{\emph{Deep Learning}} en \textbf{Python}
+}
+	\vspace{0.3cm}\cvitem{11/12~--~12/19}{Projet Traitement d’images} {}{Amélioration des contrastes atténués par le brouillard trouvé dans les images. Détection des véhicules et des marquages routiers en \textbf{Matlab}}
+	\vspace{0.3cm}\cvitem{04/19~--~05/19}{Projet simulation régulateur PID} {}{Simulation d’un automobile avec régulateur de vitesse en basant sur le langage \textbf{C++} en \textbf{programmation orienté objet OOP} afin d’asservir la vitesse de la voiture via un régulateur \textbf{PID}}
+	\vspace{0.3cm}\cvitem{04/18~--~05/18}{Classification des images}{}{Implémentation de l'algorithme \textbf{Kohonen} qui se base sur les principes du réseau des neurones et les K-plus proches voisins avec le langage \textbf{C}}
+	\vspace{0.3cm}\cvitem{01/18}{Robot Sumo ~~-~~ équipe de 7 personnes}{}{Fabrication d'un robot mobile Sumo. \\Chargé de la phase de programmation et stratégie d'attaque}
+	
+\end{cvtable}
+
+
+
+
+
+\cvsection{Formations Techniques}
+\begin{cvtable}
+	\cvpubitem{\textbf{LinkedIN Learning} ~--~ \emph{Become a Django Developer}}{Développement Web}
+		{Montée en compétence sur le Framework web \textbf{Django} de \textbf{Python} ainsi que les languages web \textbf{HTML}, \textbf{CSS} et \textbf{JavaScript}}{Depuis juin 2021}
+		\vspace{-0.05cm}
+		\\
+		\cvpubitem{Application \emph{Desktop} ~--~ Pyqt5}{Interface graphique GUI}{Développement d'une application \emph{Desktop} pour la visualisation \& la manipulation des données avec \textbf{Pyqt5} : Bibliothèque de \textbf{Python} pour le développement de \textbf{GUI}}
+		{07/21 - 08/21}
+
+\end{cvtable}
+
+\noindent
+\end{document}
+\cvsection{Compétences}
+%\cvsubsection{One-line}
+\begin{cvtable}
+	\cvitemshort{\textbf{Systèmes d'exploitation}}{\em Windows et Linux}
+	\cvitemshort{\textbf{Langages programmation}}{\em Python, Matlab, C/C++, Java, Visual Basic, Html, CSS}
+	\cvitemshort{\textbf{Outils programmation}}{\em Git, Visual Studio Code, Spyder (Anaconda)}
+\end{cvtable}
