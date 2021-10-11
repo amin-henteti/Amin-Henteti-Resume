@@ -1,4 +1,4 @@
-Forty Seconds CV
+My CV templates
 ================
 
 ## Description
@@ -50,7 +50,7 @@ available at all.
 
 ## License
 
-Forty Seconds CV is distributed under the BSD 3-Clause license. See LICENSE
+This CV Template is distributed under the BSD 3-Clause license. See LICENSE
 file for more information.
 
 ## User Interface
