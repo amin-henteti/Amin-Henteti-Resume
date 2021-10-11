@@ -124,7 +124,7 @@
 	\graphicspath{[scale=0.5]{pics/flags/}}
 
 	% social network accounts incl. proper hyperlinks
-	\profilesection{Réseaux Sociaux}{}
+	\profilesection{Réseaux Sociaux}{}\vspace{-0.2cm}\\
 		\begin{icontable}{1.5em}{1em}
 			\social{\faLinkedin}
 				{https://www.linkedin.com/in/amin-henteti-632312119/}
@@ -134,24 +134,26 @@
 				{/amin-henteti}
 		\end{icontable}
 
-	\profilesection{Langues}{}
+	\profilesection{Langues}{}\vspace{-0.2cm}\\
 	\pointskill{\flag{FR.png}}{Français}{4}
 	\pointskill{\flag{GB.png}}{Anglais}{4}
 		\pointskill{\flag{tun.png}}{Arabe}{5}
 		%\pointskill{\flag{DE.png}}{Allmend}{2}
 
-	\profilesection{Programmation}{}
+	\profilesection{Programmation}{}\vspace{-0.2cm}\\
 	\barskill{\faPython}{Python}{90}
 	\barskill{\faFileCode}{Matlab}{80}
 	\barskill{\faCuttlefish}{C/C++}{60}
+	\barskillnew{perl.png}{Perl}{50}
 	\barskill{\faJava}{Java}{40}
 	\barskill{\faHtml5}{HTML}{30}
 	\barskill{\faCss3}{CSS}{30}
-	\barskill{\faEndereco}{Visual Basic}{20}
+	\barskillnew{VSB.png}{Visual Basic}{20}
 	
 	\profilesection{ Outils} { de  programmation}
-	\skill[]{}{\large Git, Visual Studio Code,\\ Spyder (Anaconda), \\
-	Windows et Linux}
+	\vspace{-0.2cm}\\
+	\skill[]{}{ Git, Visual Studio Code,\\ Spyder (Anaconda),
+	Linux et windows}
 	
 
 %	\cvitemshort{\textbf{Langages programmation}}{\em Python, Matlab, C/C++, Java, Visual Basic, Html, CSS}
@@ -248,34 +250,39 @@ Formation d'ingénieur \textbf{généraliste} en {mécanique}, {informatique} et
 
 \cvsection{Projets Académiques}
 \begin{cvtable}[1.5]
-\cvitem{07/20 - 12/20}{\textbf{\large Groupe PSA} - Vélizy Paris, \emph{Stage de fin d'études}} {6 mois}{Optimisation et automatisation du processus de calcul de crash automobile par \textbf{\emph{Machine Learning}}. 
-Analyse des résultats en choc latéral des modèles numériques à travers des rapports
-Excel et HTML écrits automatiquement par un code \textbf{Python}\\
-Environnement technique: \emph{Python, Perl, SFE Concept, ANSA, META}}
+\cvitem{07/20 - 12/20}{\textbf{\large Groupe PSA} - Vélizy Paris, \emph{Stage de fin d'études}} {6 mois}{ Optimisation et automatisation du processus de simulation de crash \\automobile par \textbf{\emph{Machine Learning}}. \\
+Réécriture d'un code source (développé en \textbf{Perl}) en \textbf{Python} de manière plus flexible pour simplifier l'automatisation du simulation de crash des modèles numériques paramétrés. \\%la simulation des modèles de crash automobile.
+%Réécriture du code source existant développé en Perl  en Python
+%Unification des codes existants (Python et Perl) en un code Python et 
+%l'améliorer par l'ajout de l'aspect de flexibilité et généralité pour l'automatisation du boucle de simulation numérique. \\
+Analyse des résultats en choc des modèles numériques à travers des rapports
+Excel et HTML écrits automatiquement par un code Python\\
+Environnement technique: \emph{Python, Perl, Excel, HTML, SFE Concept, Radioss, ANSA, META}}
 \vspace{-0.25cm}
 \\
-\vspace{0.3cm}\cvitem{05/19 - 07/19}{\textbf{\large Mines Paris} ~~-~~ {\normal Centre Automatique et Systèmes},\\ \emph{Stage de recherche}}{3 mois}{Conception d'un capteur à base de la technologie des \textbf{fibres optiques} par laser, dans le but d'estimer par dé-convolution un signal original à partir du signal observé\\
+\vspace{0.25cm}\cvitem{05/19 - 07/19}{\textbf{\large Mines Paris} ~~-~~ {\normal Centre Automatique et Systèmes},\\ \emph{Stage de recherche}}{3 mois}{Conception d'un capteur à base de la technologie des \textbf{fibres optiques} par laser, dans le but d'estimer par dé-convolution un signal original à partir du signal observé\\
 Environnement technique: \emph{Matlab, Python}}
 \vspace{0.3cm}
 
 \cvitem{11/19~--~12/19}{\textbf{\large Total} ~~-~~ Projet d'entreprise ~~-~~ équipe de 6 personnes}{}{Prédiction des pertes de la performance des panneaux solaires liées au dépôt de poussière sur la face des panneaux avec un algorithme \textbf{\emph{Deep Learning}} en \textbf{Python}
 }
-	\vspace{0.3cm}\cvitem{11/12~--~12/19}{Projet Traitement d’images} {}{Amélioration des contrastes atténués par le brouillard trouvé dans les images. Détection des véhicules et des marquages routiers en \textbf{Matlab}}
-	\vspace{0.3cm}\cvitem{04/19~--~05/19}{Projet simulation régulateur PID} {}{Simulation d’un automobile avec régulateur de vitesse en basant sur le langage \textbf{C++} en \textbf{programmation orienté objet OOP} afin d’asservir la vitesse de la voiture via un régulateur \textbf{PID}}
-	\vspace{0.3cm}\cvitem{04/18~--~05/18}{Classification des images}{}{Implémentation de l'algorithme \textbf{Kohonen} qui se base sur les principes du réseau des neurones et les K-plus proches voisins avec le langage \textbf{C}}
-	\vspace{0.3cm}\cvitem{01/18}{Robot Sumo ~~-~~ équipe de 7 personnes}{}{Fabrication d'un robot mobile Sumo. \\Chargé de la phase de programmation et stratégie d'attaque}
+	\vspace{0.25cm}\cvitem{11/12~--~12/19}{Projet Traitement d’images} {}{Amélioration des contrastes atténués par le brouillard trouvé dans les images. Détection des véhicules et des marquages routiers en \textbf{Matlab}}
+	\vspace{0.25cm}\cvitem{04/19~--~05/19}{Projet simulation régulateur PID} {}{Simulation d’un automobile avec régulateur de vitesse en basant sur le langage \textbf{C++} en \textbf{programmation orienté objet OOP} afin d’asservir la vitesse de la voiture via un régulateur \textbf{PID}}
+	\vspace{0.25cm}\cvitem{04/18~--~05/18}{Classification des images}{}{Implémentation de l'algorithme \textbf{Kohonen} qui se base sur les principes du réseau des neurones et les K-plus proches voisins avec le langage \textbf{C}}
+	\vspace{0.25cm}\cvitem{01/18}{Robot Sumo ~~-~~ équipe de 7 personnes}{}{Fabrication d'un robot mobile Sumo. \\Chargé de la phase de programmation et stratégie d'attaque}
 	
 \end{cvtable}
 
 
 
-
+\vspace{-0.12cm}
+		\\
 
 \cvsection{Formations Techniques}
 \begin{cvtable}
 	\cvpubitem{\textbf{LinkedIN Learning} ~--~ \emph{Become a Django Developer}}{Développement Web}
 		{Montée en compétence sur le Framework web \textbf{Django} de \textbf{Python} ainsi que les languages web \textbf{HTML}, \textbf{CSS} et \textbf{JavaScript}}{Depuis juin 2021}
-		\vspace{-0.05cm}
+		\vspace{-0.35cm}
 		\\
 		\cvpubitem{Application \emph{Desktop} ~--~ Pyqt5}{Interface graphique GUI}{Développement d'une application \emph{Desktop} pour la visualisation \& la manipulation des données avec \textbf{Pyqt5} : Bibliothèque de \textbf{Python} pour le développement de \textbf{GUI}}
 		{07/21 - 08/21}
