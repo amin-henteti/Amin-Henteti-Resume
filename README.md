@@ -9,7 +9,7 @@ This project can be regarded as a major rewrite of the original twentysecondcv
 class. It does not aim to provide a new CV style that you can't find anywhere
 else, but rather takes a very well established one and adds a straightforward
 user interface to almost all layout elements and thus creates a highly
-customizable framework-class: FortySecondsCV.
+customizable framework-class
 
 Just try it yourself starting from `template.tex`!
 
@@ -372,8 +372,3 @@ has to be defined within the `document` environment.
   \newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf}
   ```
 
-
-## Example
-
-![](pics/template-0.jpg)
-![](pics/template-1.jpg)
